@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
             expiresIn: '30d',
         });
 
-        res.status(201).json({
+        return res.status(201).json({
             _id: user._id,
             name: user.name,
             email: user.email,
@@ -49,10 +49,9 @@ router.post('/register', async (req, res) => {
         });
     } catch (error) {
         if (error instanceof z.ZodError) {
-            res.status(400).json({ message: error.errors[0].message });
-        } else {
-            res.status(500).json({ message: 'Server error' });
+            return res.status(400).json({ message: error.errors[0].message });
         }
+        return res.status(500).json({ message: 'Server error' });
     }
 });
 
@@ -78,7 +77,7 @@ router.post('/login', async (req, res) => {
             expiresIn: '30d',
         });
 
-        res.json({
+        return res.json({
             _id: user._id,
             name: user.name,
             email: user.email,
@@ -87,10 +86,9 @@ router.post('/login', async (req, res) => {
         });
     } catch (error) {
         if (error instanceof z.ZodError) {
-            res.status(400).json({ message: error.errors[0].message });
-        } else {
-            res.status(500).json({ message: 'Server error' });
+            return res.status(400).json({ message: error.errors[0].message });
         }
+        return res.status(500).json({ message: 'Server error' });
     }
 });
 
