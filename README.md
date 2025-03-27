@@ -35,7 +35,7 @@ cd backend
 npm install
 
 # Create .env file
-cp .env.example .env
+cp .env.bak .env
 # Edit .env with your configuration:
 # PORT=5000
 # MONGODB_URI=mongodb://localhost:27017/innovationhub
