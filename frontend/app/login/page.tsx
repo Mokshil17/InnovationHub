@@ -46,7 +46,7 @@ export default function LoginPage() {
                             </label>
                             <input
                                 type="email"
-                                className="input input-bordered"
+                                className="input input-bordered text-base-content"
                                 {...register('email')}
                             />
                             {errors.email && (
@@ -64,7 +64,7 @@ export default function LoginPage() {
                             </label>
                             <input
                                 type="password"
-                                className="input input-bordered"
+                                className="input input-bordered text-base-content"
                                 {...register('password')}
                             />
                             {errors.password && (

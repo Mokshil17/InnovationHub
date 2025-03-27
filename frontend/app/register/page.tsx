@@ -47,7 +47,7 @@ export default function RegisterPage() {
                             </label>
                             <input
                                 type="text"
-                                className="input input-bordered"
+                                className="input input-bordered text-base-content"
                                 {...register('name')}
                             />
                             {errors.name && (
@@ -65,7 +65,7 @@ export default function RegisterPage() {
                             </label>
                             <input
                                 type="email"
-                                className="input input-bordered"
+                                className="input input-bordered text-base-content"
                                 {...register('email')}
                             />
                             {errors.email && (
@@ -83,7 +83,7 @@ export default function RegisterPage() {
                             </label>
                             <input
                                 type="password"
-                                className="input input-bordered"
+                                className="input input-bordered text-base-content"
                                 {...register('password')}
                             />
                             {errors.password && (
